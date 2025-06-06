@@ -54,12 +54,12 @@ namespace Services.Implementations
             lesson.CourseId = creatingLessonDto.CourseId;
             var createdLesson = await _lessonRepository.AddAsync(lesson);
             await _lessonRepository.SaveChangesAsync();
-
+            /*
             await _busControl.Publish(new MessageDto
             {
                 Content = $"Lesson {createdLesson.Id} with subject {createdLesson.Subject} is added"
             });
-
+            */
             return createdLesson.Id;
         }
 

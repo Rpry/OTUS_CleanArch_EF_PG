@@ -60,12 +60,12 @@ namespace Services.Implementations
             var createdCourse = await _courseRepository.AddAsync(course);
             await _courseRepository.SaveChangesAsync();
             
-            
+            /*
             await _busControl.Publish(new MessageDto
             {
                 Content = $"Course {createdCourse.Id} with name {createdCourse.Name} is added"
             });
-
+            */
             return createdCourse.Id;
         }
         
