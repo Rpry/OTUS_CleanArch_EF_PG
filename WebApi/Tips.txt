@@ -1,0 +1,6 @@
+docker-compose -f otus-base-application.yml up --build
+
+.\otus-base-application-start
+
+docker build -f Dockerfile  -t webapi:1.0 .
+kubectl set image Deployments/webapi-deployment webapi=webapi:2.2 -n otus

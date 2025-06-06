@@ -1,0 +1,5 @@
+insert into __EFMigrationsHistory (MigrationId, ProductVersion)
+values ('20240815175257_AddedDateTime1', '8.0.0')
+
+                    b.Property<DateTime>("DateTime")
+                        .HasColumnType("TEXT");
